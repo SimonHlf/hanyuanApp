@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>汉源快够</title>
+    <link rel="stylesheet" type="text/css" href="./css/api.css" />
+    <link rel="stylesheet" type="text/css" href="./css/aui.css" />
+</head>
+<body>
+<header class="aui-bar aui-bar-nav" style="padding-top:25px;">
+    <a class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-location"></span>郑州
+    </a>
+    <div class="aui-title">首页</div>
+    <a class="aui-pull-right aui-btn">
+        <span class="aui-iconfont aui-icon-comment"></span>
+    </a>
+</header>
+<footer class="aui-bar aui-bar-tab" id="footer">
+    <div class="aui-bar-tab-item aui-active" tapmode>
+        <i class="aui-iconfont aui-icon-home"></i>
+        <div class="aui-bar-tab-label">首页</div>
+    </div>
+    <div class="aui-bar-tab-item" tapmode>
+        <i class="aui-iconfont aui-icon-star"></i>
+        <div class="aui-bar-tab-label">分类</div>
+    </div>
+    <div class="aui-bar-tab-item" tapmode>
+        <div class="aui-badge">9</div>
+        <i class="aui-iconfont aui-icon-cart"></i>
+        <div class="aui-bar-tab-label">购物车</div>
+    </div>
+    <div class="aui-bar-tab-item" tapmode>
+        <div class="aui-dot"></div>
+        <i class="aui-iconfont aui-icon-my"></i>
+        <div class="aui-bar-tab-label">我的</div>
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript" src="./script/aui-tab.js" ></script>
+<script type="text/javascript">
+	var header,footer;
+    var tab = new auiTab({
+        element:document.getElementById("footer"),
+        index:1,
+        repeatClick:false
+    },function(ret){
+	    api.setFrameGroupIndex({
+		    name: 'home',
+		    index: ret.index-1
+		});
+    });
+    apiready = function(){
+    	header = $api.dom('header');
+    	footer = $api.dom('footer');
+    	opengroup();
+    };
+    function opengroup(){
+		api.openFrameGroup({
+		    name: 'home',
+		    scrollEnabled:false,
+		    rect: {
+		        x: 0,
+		        y: $api.offset(header).h,
+		        w: api.winWidth,
+		        h: api.winHeight-$api.offset(header).h-$api.offset(footer).h
+		    },
+		    frames: [{
+		        name: 'home_index',
+		        url: 'html/home.html'
+		    }, {
+		        name: 'home_cate',
+		        url: 'html/cate.html'
+		    }, {
+		        name: 'home_cart',
+		        url: 'html/cart.html'
+		    }, {
+		        name: 'home_user',
+		        url: 'html/user/user.html'
+		    }]
+		}, function(ret, err) {
+		    var index = ret.index;
+		    console.log(index);
+		});
+    }
+</script>
+</html>

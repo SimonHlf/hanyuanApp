@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+	</head>
+	<style>
+		.to {
+			width: 3rem;
+			height: 3rem;
+			border-radius: 3rem;
+			overflow: hidden;
+		}
+		.aui-list .aui-list-item {
+		background-size:100% 0;
+		}
+		.aui-list.aui-media-list .aui-list-item:active {
+			background-color: rgba(0,0,0,0);
+		}
+	</style>
+	<body style="background-color: #fff;">
+		<!--		<div style="background-image: url(../../image/userbg.png);width: 100%;height: 10rem;
+		display: flex; justify-content: center; flex-direction: column;" >
+		<div style="display: inline">
+		<text style="width: 10rem;height: 3rem;">
+		xingmingjsdfhsoijfso
+		</text>
+		</div>
+		</div>-->
+		<div style="background-image: url(../../image/userbg.png);width: 100%;height: 10rem;display: flex; justify-content: center; flex-direction: column;">
+			<ul id="userItem" class="aui-list aui-media-list" style="background: none;border: none;">
+				<li class="aui-list-item aui-list-item-middle">
+					<div class="aui-media-list-item-inner">
+						<div class="aui-list-item-media">
+							<img id="userImg" src="../../image/liulangnan.png" class="aui-img-round aui-list-img-sm">
+						</div>
+						<div id="userName" class="aui-list-item-inner aui-list-item-arrow">
+							流浪男
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<section class="aui-grid aui-margin-b-15">
+			<div class="aui-row">
+				<div class="aui-col-xs-4">
+					<p id="followgoods">
+						0
+					</p>
+					<div class="aui-grid-label">
+						关注商品
+					</div>
+				</div>
+				<div class="aui-col-xs-4">
+					<p id="followshops">
+						0
+					</p>
+					<div class="aui-grid-label">
+						关注店铺
+					</div>
+				</div>
+				<div class="aui-col-xs-4">
+					<p id="followcodes">
+						0
+					</p>
+					<div class="aui-grid-label">
+						关注记录
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<div class="aui-content aui-margin-b-15">
+			<ul class="aui-list aui-list-in">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner aui-list-item-arrow">
+						<div class="aui-list-item-title">
+							<i class="aui-iconfont aui-icon-gear"> 我的订单</i>
+						</div>
+						<div  class="aui-list-item-right" >
+							查看全部订单
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<section class="aui-grid">
+			<div class="aui-row">
+				<div class="aui-col-5">
+					<div class="aui-badge">
+						88
+					</div>
+					<i class="aui-iconfont aui-icon-home"></i>
+					<div class="aui-grid-label">
+						待付款
+					</div>
+				</div>
+				<div class="aui-col-5">
+					<div class="aui-badge">
+						88
+					</div>
+					<i class="aui-iconfont aui-icon-gear"></i>
+					<div class="aui-grid-label">
+						待发货
+					</div>
+				</div>
+				<div class="aui-col-5">
+					<div class="aui-badge">
+						88
+					</div>
+					<i class="aui-iconfont aui-icon-map"></i>
+					<div class="aui-grid-label">
+						待收货
+					</div>
+				</div>
+				<div class="aui-col-5">
+					<div class="aui-badge">
+						88
+					</div>
+					<i class="aui-iconfont aui-icon-calendar"></i>
+					<div class="aui-grid-label">
+						待评价
+					</div>
+				</div>
+				<div class="aui-col-5">
+					<div class="aui-badge">
+						88
+					</div>
+					<i class="aui-iconfont aui-icon-date"></i>
+					<div class="aui-grid-label">
+						退货/换货
+					</div>
+				</div>
+			</div>
+			<div style="height: 0.8rem;background: #dddddd" ></div>
+			<div class="aui-content aui-margin-b-15">
+				<ul class="aui-list aui-list-in">
+					<li class="aui-list-item">
+						<div class="aui-list-item-inner aui-list-item-arrow">
+							<div class="aui-list-item-title">
+								<i class="aui-iconfont aui-icon-gear"> 我的钱包</i>
+							</div>
+							<div  class="aui-list-item-right" >
+								余额
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<section class="aui-grid aui-margin-b-15">
+				<div class="aui-row">
+					<div class="aui-col-xs-6">
+						<p >
+							0
+						</p>
+						<div class="aui-grid-label">
+							余额
+						</div>
+					</div>
+					<div class="aui-col-xs-6">
+						<p >
+							0
+						</p>
+						<div class="aui-grid-label">
+							积分
+						</div>
+					</div>
+					<!--<div class="aui-col-xs-4">
+					<p>000</p>
+					<div class="aui-grid-label">
+					地图
+					</div>
+					</div>-->
+				</div>
+			</section>
+			<div style="height: 0.8rem;background: #dddddd" ></div>
+			<div class="aui-content aui-margin-b-15">
+				<ul class="aui-list aui-list-in ">
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 收货地址</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 修改密码</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 我的推广</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 新人有礼</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 意见反馈</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 帮助中心</i>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div style="height: 0.8rem;background: #dddddd" ></div>
+			<div class="aui-content aui-margin-b-15">
+				<ul class="aui-list aui-list-in ">
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 官方客服</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 官方网址</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 公司介绍</i>
+						</div>
+					</li>
+					<li class="aui-list-item aui-list-item-arrow">
+						<div class="aui-list-item-label-icon">
+							<i class="aui-iconfont aui-icon-home"> 联系我们</i>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+		};
+	</script>
+</html>

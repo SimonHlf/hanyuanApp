@@ -1,0 +1,41 @@
+body {
+	background: #F2F2F2;
+}
+
+.floor1, .floor2, .floor3,.floor4 {
+	margin-top: 20px;
+}
+.floor1-head-title, .floor2-head-title, .floor3-head-title,.floor4-head-title,.floor5-head-title,.floor1-head-more,.floor2-head-more,.floor3-head-more,.floor4-head-more,.floor5-head-more{
+	color: #333;
+}
+.floor1-head-con {
+	color: #222;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.floor1-head-time {
+	background: #00AAEF;
+	color: white;
+}
+.floor1-body, .floor2-body, .floor3-body,.floor4-body,.floor5-body {
+	background: #FFFFFF;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.floor1-ad, .floor2-ad, .floor3-ad,.floor4-ad,.floor5-ad {
+	padding: 0.25rem;
+}
+.floor5{
+
+	margin-top: 20px;
+	clear:both;
+}
+.floor5-body-price{
+	color: #00AAEF;
+	text-align:center;
+}
+.floor5-body-priceN{
+	color: #999;
+	text-decoration: line-through;
+	text-align:center;
+}

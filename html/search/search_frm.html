@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<title>title</title>
+	<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+	<style>
+		.hot-head,.near-head{
+			padding: 1rem 0 0rem 0.4rem;
+			background: #FFF;
+			color: #666;
+		}
+		.hot-body-item,.near-body-item {
+			background: #EBEBEB;
+			padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+			margin: 0.2rem 0.4rem 0.4rem 0;
+			border-radius:1rem;
+		}
+		.hot-body,.near-body{
+			margin:1.2rem 0.4rem 0.4rem 0.4rem;
+			background:	#FFF;
+			color: #333;
+		}
+		.near-empty{
+			height: 2.5rem;
+			text-align: center;
+			padding-top: 1rem;
+			color: #666;
+		}
+
+	</style>
+</head>
+
+<body style="background:#FFF;">
+	<div>
+		<div class="aui-list-item-title hot-head">
+			热门搜索
+
+		</div>
+		<div class="hot-body">
+			<span class="hot-body-item">周大福</span>
+			<span class="hot-body-item">内衣</span>
+			<span class="hot-body-item">周大福</span>
+			<span class="hot-body-item">手机</span>
+			<span class="hot-body-item">笔记本电脑</span>
+			<span class="hot-body-item">保暖内衣</span>
+		</div>
+		<div>
+			<div class="aui-list-item-title near-head" style="position:relative;">
+				最近搜索
+				<i class="aui-iconfont aui-icon-map" style="position:absolute;right:1rem;"></i>
+			</div>
+			<div class="near-body">
+				<span class="near-body-item">周大福</span>
+				<span class="near-body-item">内衣</span>
+				<span class="near-body-item">周大福</span>
+				<span class="near-body-item">手机</span>
+				<span class="near-body-item">笔记本电脑</span>
+				<span class="near-body-item">保暖内衣</span>
+			</div>
+			<div class="near-empty">
+				暂无更多记录
+			</div>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function() {};
+
+	function btlogin() {
+		var uname = document.getElementById("ipusername").value;
+		var pword = document.getElementById("ippassword").value;
+		api.toast({
+			msg: uname + pword
+		});
+	};
+
+	function btregister() {
+		api.openWin({
+			name: 'register_win',
+			url: 'register_win.html',
+			animation: {
+				type: 'none'
+			}
+		});
+	};
+
+	function callbackPassword() {
+		api.openWin({
+			name: 'callback_win',
+			url: 'callback_win.html',
+			animation: {
+				type: 'none'
+			},
+		});
+	};
+</script>
+
+</html>

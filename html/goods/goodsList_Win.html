@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>商品列表</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<link rel="stylesheet" href="http://at.alicdn.com/t/font_464632_i611crodx8vvx6r.css" />
+		<style>
+			#sx{
+				height:1.75rem;
+				line-height:1.75rem;
+			}
+			.innerDiv{
+				text-align:center;
+				font-size:0.8rem;
+				color:#333;
+				position:relative;
+				color:#333;
+			}
+			.triangB{
+				color:#00aaef;
+				font-size:1rem;
+				position:absolute;
+			}
+			.icon-shaixuan{
+				color:#727272;
+				font-size:0.8rem;
+			}
+		</style>
+	</head>
+	<body style="background-color: #f2f2f2;">
+		<header class="aui-bar aui-bar-nav" style="padding-top:25px;">
+			<a class="aui-pull-left aui-btn" onclick="closeWin()"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
+			<div class="aui-title">
+				食品饮料
+			</div>
+		</header>
+		<!-- 条件筛选区 -->
+		<div id="sx" class="aui-row">
+			<div class="aui-col-xs-4 innerDiv" onclick="sortwin()">综合排序<i class="iconfont icon-sanjiao-dnow triangB"></i></div>
+			<div class="aui-col-xs-4 innerDiv">销量优先</div>
+			<div class="aui-col-xs-4 innerDiv">筛选<i class="iconfont icon-shaixuan"></i></div>
+		</div>	
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript">
+		var sort_status;
+		apiready = function() {
+			sort_status = 0;
+			openfrm();
+			api.addEventListener({
+	            name:'keyback'
+            },function(ret,err){
+            	closeWin();
+            });
+		};
+		function openfrm(){
+			api.openFrame({
+				name : 'goodsList_frm',
+				url : 'goodsList_frm.html',
+				rect : {
+					x : 0,
+					y : $api.offset($api.dom('header')).h+$api.offset($api.dom('#sx')).h,
+					w : api.winWidth,
+					h : api.winHeight-$api.offset($api.dom('header')).h-$api.offset($api.dom('#sx')).h
+				}
+			});
+		}
+		function sortwin(){
+			if(sort_status == 0){
+				api.openFrame({
+					name : 'sort_frm',
+					url : 'sort_frm.html',
+					rect : {
+						x : 0,
+						y : $api.offset($api.dom('header')).h+$api.offset($api.dom('#sx')).h,
+						w : api.winWidth,
+						h : api.winHeight-$api.offset($api.dom('header')).h-$api.offset($api.dom('#sx')).h
+					}
+				});
+				sort_status = 1;
+			}else{
+				api.closeFrame({
+					name: 'sort_frm'
+                });
+                sort_status = 0;
+			}
+		}
+		function closeWin(){
+			api.closeWin();
+		}
+	</script>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>商品分类</title>
+		<link rel="stylesheet" type="text/css" href="../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+		<style>
+			body{
+				background:rgba(0,0,0,0);
+			}
+			/*左侧区域 */
+			.leftSide_cate{
+				width:5rem;
+				height:100%;
+				position:fixed;
+				left:0;
+				top:0;
+				overflow-y:auto;
+			}
+			.leftSide_cate li{
+				width:100%;
+				height:2.5rem;
+				line-height:2.5rem;
+				font-size:0.8rem;
+				text-align:center;
+				color:#333333;
+			}
+			.leftSide_cate li.active{
+				background:#fff;
+				border-left:0.2rem solid #00aaef;
+				color:#00aaef;
+				box-sizing:border-box;
+			}
+			/*右侧区域 */			
+			.comCateTit{
+				height:1.25rem;
+				line-height:1.25rem;
+				text-align:center;
+				position:relative;
+			}
+			.comCateTit strong{
+				width:4.2rem;
+				display:inline-block;
+				font-size:0.8rem;
+				color:#333333;
+				background:#fff;
+				position:relative;
+				z-index:2;
+			}
+			.borLine{
+				width:100%;
+				height:0.05rem;
+				overflow:hidden;
+				background:#333;
+				position:absolute;
+				left:0px;
+				top:0.6rem;
+				z-index:1;
+			}
+			.aui-col-xs-4 img{
+				width:95%;
+			}
+		</style>
+
+	</head>
+	<body>
+		<!-- 左侧区域 -->			
+		<div class="leftSide_cate">
+			<ul>
+				<li class="active">家用电器</li>
+				<li>食品饮料</li>
+				<li>母婴玩具</li>
+				<li>鞋靴配件</li>
+				<li>时尚箱包</li>
+				<li>时尚箱包</li>
+				<li>时尚箱包</li>
+				<li>时尚箱包</li>
+				<li>时尚箱包</li>
+				<li>食品饮料</li>
+			</ul>
+		</div>
+		<!-- 右侧区域 -->		
+		<div style="padding-left:5rem;">	
+			<div class="rightSide_cate aui-padded-10">
+				<!-- 头部大图区 -->
+				<img class="aui-margin-b-10" src="../image/l1.png"/>
+				<!-- 分类区 -->
+				<div class="comCateTit aui-margin-b-10">
+					<span class="borLine"></span>
+					<strong>新鲜水果</strong>
+				</div>	
+				<section class="aui-grid">
+					<div class="aui-row">
+						 <div class="aui-col-xs-4" onclick="opencatelist();">
+				            <img src="../image/demo1.png"/>
+				            <div class="aui-grid-label">苹果</div>
+				        </div>
+				        <div class="aui-col-xs-4">
+				             <img src="../image/demo2.png"/>
+				            <div class="aui-grid-label">香蕉</div>
+				        </div>
+				        <div class="aui-col-xs-4">
+				             <img src="../image/demo3.png"/>
+				            <div class="aui-grid-label">西瓜</div>
+				        </div>
+				        <div class="aui-col-xs-4">
+				             <img src="../image/demo4.png"/>
+				            <div class="aui-grid-label">大枣</div>
+				        </div>
+				        <div class="aui-col-xs-4">
+				             <img src="../image/demo4.png"/>
+				            <div class="aui-grid-label">大枣</div>
+				        </div>
+				        <div class="aui-col-xs-4">
+				             <img src="../image/demo4.png"/>
+				            <div class="aui-grid-label">大枣</div>
+				        </div>
+					</div>
+				</section>
+				<div class="comCateTit aui-margin-b-10">
+					<span class="borLine"></span>
+					<strong>精选肉类</strong>
+				</div>
+				<section class="aui-grid">
+					<div class="aui-row">
+						 <div class="aui-col-xs-4">
+				            <img src="../image/demo1.png"/>
+				            <div class="aui-grid-label">牛肉</div>
+				        </div>
+				        <div class="aui-col-xs-4">
+				             <img src="../image/demo2.png"/>
+				            <div class="aui-grid-label">猪肉</div>
+				        </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../script/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+		};
+		function opencatelist(){
+			api.openWin({
+	            name: 'goods_list',
+	            url: 'goods/goodsList_Win.html'
+            });
+		}
+	</script>
+</html>

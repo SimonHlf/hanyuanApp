@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>title</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css"/>
+		<style>
+			body {
+			}
+		</style>
+	</head>
+	<body>
+		<!--logo，人物头像-->
+		<div class="aui-userimg" style="padding-top: 100px;padding-bottom: 80px;" >
+			<img src="../../image/f1.jpg" style="margin: 0 auto;width: 80px;height: 80px;"/>
+		</div>
+		<!--登录表单-->
+		<div class="aui-content aui-margin-b-15" style="width: 70%;margin: 0 auto;overflow: hidden;">
+			<ul class="aui-list aui-form-list">
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-col-xs-3">
+							<i class="aui-iconfont aui-icon-my"></i>
+						</div>
+						<div class="aui-list-item-input">
+							<input  id="ipusername" type="text" placeholder="UserName">
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-item">
+					<div class="aui-list-item-inner">
+						<div class="aui-col-xs-3">
+							<i class="aui-iconfont aui-icon-lock"></i>
+							<!--<p>lock</p>-->
+						</div>
+						<div class="aui-list-item-input">
+							<input id="ippassword" type="password" placeholder="Password">
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--按钮-->
+		<div class="aui-content-padded" style="width: 70%;margin: 0 auto;text-align: center">
+			<p>
+
+				<div onclick="btlogin()"  class="aui-btn aui-btn-info aui-btn-block aui-btn-sm" style="height: 2.8rem;font-size:1.3rem ;text-align: center;line-height: 3rem;border-radius: 4rem;">
+					登录
+				</div>
+			</p>
+			<p style="margin-top: 10px;">
+				<div onclick="btregister()"  class="aui-btn aui-btn-info aui-btn-block aui-btn-outlined"style="height: 2.8rem;font-size:1.3rem ;text-align: center;line-height: 3rem;border-radius: 4rem;">
+					免费注册
+				</div>
+			</p>
+			<p onclick="callbackPassword()" style="margin-top: 0.5rem;text-align: right;font-size: 1rem;">
+				忘记密码?
+			</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			//api.parseTapmode();
+		};
+		function btlogin() {
+			var uname = document.getElementById("ipusername").value;
+			var pword = document.getElementById("ippassword").value;
+			if (uname === '123' && pword === '123') {
+				api.closeWin();
+			$api.setStorage('login_status',1);
+			} else {
+				api.toast({
+					msg : '您输入的账号或者密码有错误，请查证后重新登陆'
+				});
+			}
+		};
+		function btregister() {
+			api.openWin({
+				name : 'register_win',
+				url : 'register_win.html',
+				animation : {
+					type : 'none'
+				}
+			});
+		};
+		function callbackPassword() {
+			api.openWin({
+				name : 'callback_win',
+				url : 'callback_win.html',
+				animation : {
+					type : 'none'
+				},
+			});
+		};
+	</script>
+</html>

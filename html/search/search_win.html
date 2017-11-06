@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>搜索</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+</head>
+
+<body style="background-color: #fff;">
+    <!--标题栏-->
+    <header class="aui-bar aui-bar-nav" style="padding-top:20px">
+      <a class="aui-pull-left aui-btn" id="headBack">
+          <span class="aui-iconfont aui-icon-left" onclick="back()"></span>返回
+      </a>
+    <!-- <div class="aui-title">Title</div> -->
+    <div class="aui-searchbar " id="search" style="background:none;width:80%">
+    <div class="aui-searchbar-input aui-border-radius">
+        <i class="aui-iconfont aui-icon-search"></i>
+        <form >
+            <input type="search" placeholder="请输入搜索内容" id="search-input">
+        </form>
+    </div>
+    <div style="color:#FFF">搜索</div>
+</div>
+</header>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        openfrm();
+        api.addEventListener({
+            name: 'keyback'
+        }, function(ret, err) {
+            api.closeWin();
+        });
+    };
+
+    function back() {
+        api.closeWin();
+    };
+
+    function openfrm() {
+        api.openFrame({
+            name: 'search_frm',
+            url: 'search_frm.html',
+            rect: {
+                x: 0,
+                y: $api.offset($api.dom('header')).h,
+                w: api.winWidth,
+                h: api.winHeight
+            }
+        });
+    };
+</script>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>商品列表</title>
+		<link rel="stylesheet" type="text/css" href="../../css/api.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/aui.css" />
+		<style>
+			body{
+				background:rgba(0,0,0,0);
+			}
+			/* 商品列表区->singleList */			
+			.aui-list .aui-list-item-media{
+				width:6rem !important;
+			}
+			.aui-list-item-text{
+				font-size:0.6rem !important;
+				-webkit-justify-content:initial !important;
+				justify-content:initial !important;
+			}
+			.originPrice{
+				text-decoration:line-through;
+				font-size:0.6rem;
+				color:#afafaf;
+			}
+			.aui-list-item-text p{
+				line-height:1.5rem;
+			}
+			.aui-list-item-text p:nth-of-type(1){
+				width:45%;
+				font-size:1rem;
+				margin-right:0.15rem;
+				color:#00AAEF;
+			}
+			.aui-list-item-text p:nth-of-type(2){
+				width:60%;
+				font-size:0.8rem;
+				color:#666;
+				position:relative;
+				margin-top:-5px;
+			}
+			.aui-list-item-text p .rmb,
+			.txtBox .rmb{
+				font-size:0.6rem;
+				margin-right:0.1rem;
+			}
+			.give{
+				width:0.8rem;
+				height:0.8rem;
+				line-height:0.8rem;
+				text-align:center;
+				background:#00AAEF;
+				color:#fff;
+				border-radius:2px;
+				font-size:0.6rem;
+			}
+			.jifenTxt{
+				position:absolute;
+				left:0.9rem;
+				top:2px;
+			}
+			/* 商品列表区->doubleList */
+			.aui-row .smPadding{
+				padding:0.3rem 0 !important;
+			}
+			.aui-col-xs-6 img,
+			.txtBox{
+				width:95%;
+				margin:0 auto;
+			}
+			.txtBox p{
+				text-align:left !important;
+			}	
+			.txtBox p.goodsTxt{
+				font-size:0.8rem !important;
+				color:#333;
+			}
+			.txtBox p:nth-of-type(3){
+				color:#00AAEF;
+				font-size:1rem;
+				margin:-4px 3px 0 0;
+			}
+			.txtBox p:nth-of-type(4){
+				position:relative;
+				margin-top:-8px;
+				font-size:0.8rem;
+			}	
+		</style>
+	</head>
+	<body>
+		<!-- 列表区域 -->
+		<div class="aui-content">
+			<!-- 第一种预览方式singleList -->			
+<!--			<ul id="singleList" class="aui-list aui-media-list">
+				<li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img class="listImg" src="../../image/demo1.png">
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-title">
+		                       	 Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱
+		                    </div>
+		                     <div class="aui-list-item-text">
+		                     	<span class="originPrice">原价：1999.0</span> 
+		                    </div>
+		                     <div class="aui-list-item-text">
+		                     	<p><span class="rmb">¥</span>999.00</p>
+		                     	<p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+		                     </div>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img class="listImg" src="../../image/demo2.png">
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-title">
+		                       	 Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱
+		                    </div>
+		                     <div class="aui-list-item-text">
+		                     	<span class="originPrice">原价：1999.0</span> 
+		                    </div>
+		                     <div class="aui-list-item-text">
+		                     	<p><span class="rmb">¥</span>999.00</p>
+		                     	<p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+		                     </div>
+		                </div>
+		            </div>
+		        </li>
+		        <li class="aui-list-item">
+		            <div class="aui-media-list-item-inner">
+		                <div class="aui-list-item-media">
+		                    <img class="listImg" src="../../image/demo2.png">
+		                </div>
+		                <div class="aui-list-item-inner">
+		                    <div class="aui-list-item-title">
+		                       	 Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱
+		                    </div>
+		                     <div class="aui-list-item-text">
+		                     	<span class="originPrice">原价：1999.0</span> 
+		                    </div>
+		                     <div class="aui-list-item-text">
+		                     	<p><span class="rmb">¥</span>999.00</p>
+		                     	<p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+		                     </div>
+		                </div>
+		            </div>
+		        </li>
+			</ul>-->
+			<!-- 第二种预览方式doubleList -->
+			<section class="aui-grid">
+				<div class="aui-row" onclick="openGoodsDetail()">
+					<div class="aui-col-xs-6 smPadding">
+			            <img src="../../image/demo1.png" />
+						<!-- 商品描述文字 -->			            
+			            <div class="txtBox">
+			           		<p class="aui-ellipsis-2 goodsTxt">Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱节能家用电冰箱节能家用电冰箱</p>
+			            	<p><span class="originPrice">原价：1999.0</span></p>
+			            	<p><span class="rmb">¥</span>999.00</p>
+		                    <p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+			            </div>
+			        </div>
+			        <div class="aui-col-xs-6 smPadding">
+			            <img src="../../image/demo2.png" />
+						<!-- 商品描述文字 -->			            
+			            <div class="txtBox">
+			           		<p class="aui-ellipsis-2 goodsTxt">Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱节能家用电冰箱节能家用电冰箱</p>
+			            	<p><span class="originPrice">原价：1999.0</span></p>
+			            	<p><span class="rmb">¥</span>999.00</p>
+		                    <p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+			            </div>
+			        </div>
+			        <div class="aui-col-xs-6 smPadding">
+			            <img src="../../image/demo3.png" />
+						<!-- 商品描述文字 -->			            
+			            <div class="txtBox">
+			           		<p class="aui-ellipsis-2 goodsTxt">Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱节能家用电冰箱节能家用电冰箱</p>
+			            	<p><span class="originPrice">原价：1999.0</span></p>
+			            	<p><span class="rmb">¥</span>999.00</p>
+		                    <p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+			            </div>
+			        </div>
+			        <div class="aui-col-xs-6 smPadding">
+			            <img src="../../image/demo4.png" />
+						<!-- 商品描述文字 -->			            
+			            <div class="txtBox">
+			           		<p class="aui-ellipsis-2 goodsTxt">Haier/海尔BCD-591WD对开门变频只能WIFI节能家用电冰箱节能家用电冰箱节能家用电冰箱</p>
+			            	<p><span class="originPrice">原价：1999.0</span></p>
+			            	<p><span class="rmb">¥</span>999.00</p>
+		                    <p><span class="give">送</span><span class="jifenTxt">999积分</span></p>
+			            </div>
+			        </div>
+				</div>
+			</section>
+		</div>		
+	</body>
+	<script type="text/javascript" src="../../script/api.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+		};
+		function openGoodsDetail(){
+			api.openWin({
+	            name: 'goods_detail',
+	            url: 'goodsDetail_Win.html'
+            });
+		}
+	</script>
+</html>

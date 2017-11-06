@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>商品列表排序</title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/aui.css"/>
+    <style>
+    	html,body{
+    		background-color: rgba(0,0,0,0.1);
+    		height: 100%;
+    	}
+    	.aui-list .aui-list-item-title{
+    		color:#333 !important;
+    	}
+    	#sxList li.active .aui-list-item-title,
+    	#sxList li.active .aui-icon-correct{
+    		color:#00AAEF !important;	
+    	}
+    </style>
+</head>
+<body>
+	<!--<div style="height: 5rem;background-color: #fff;">
+		
+	</div>-->
+	<div class="aui-content">
+		<ul id="sxList" class="aui-list aui-list-in">
+			<li class="aui-list-item active">
+	            <div class="aui-list-item-inner">
+	                <div class="aui-list-item-title">综合排序</div>
+	                <i class="aui-iconfont aui-icon-correct"></i>
+	            </div>
+        	</li>
+        	<li class="aui-list-item">
+	            <div class="aui-list-item-inner">
+	                <div class="aui-list-item-title">信用</div>
+	                <i class="aui-iconfont aui-icon-correct"></i>
+	            </div>
+        	</li>
+        	<li class="aui-list-item">
+	            <div class="aui-list-item-inner">
+	                <div class="aui-list-item-title">价格由低到高</div>
+	                <i class="aui-iconfont aui-icon-correct"></i>
+	            </div>
+        	</li>
+        	<li class="aui-list-item">
+	            <div class="aui-list-item-inner">
+	                <div class="aui-list-item-title">价格由高到低</div>
+	                <i class="aui-iconfont aui-icon-correct"></i>
+	            </div>
+        	</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript">
+	apiready = function(){
+		
+	};
+</script>
+</html>
